@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript, Yi Yao">
+    <meta name="author" content="Yi Yao">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset= "UTF-8">
+    <!-- <base href="http://www.YiYao.com" target="_blank"> -->
+    
+    <!-- Favicons -->
+    <!-- <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="assets/icons/favicon-32x32.png"
+    /> -->
+
+    <!-- Animate CSS CDN -->
+    <title> Yi Yao Personal Page </title>
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="outfit.css">
+</head>
+
+<body> 
+    <!-- Navbar -->
+    <nav>
+        <h1>Yi Yao</h1>
+        <ul class="navigation">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skill-header" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+    </nav>
+
+    <!-- BackGround -->
+    <!-- <div class = "bg">
+        <span> Yi Yao </span>
+    </div> -->
+
+    <script type="text/javascript">
+        const bg=document.querySelector(".bg");
+        document.addEventListener("scroll", 
+        function(){
+            const scrollY = window.scrollY;
+            if(scrollY != 0){
+                bg.style.backgroundPosition = "calc(50% + "+scrollY+"px) calc(50% + "+scrollY+"px)"; 
+            }else{
+                bg.style.backgroundPosition = "";
+            }
+        })
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <!-- <img
+          src="assets/images/wfh_1.svg"
+          alt="jane-doe"
+          loading="lazy"
+          class="hero-img"
+        /> -->
+        <div class = "bg">
+            <span> Yi Yao </span>
+        </div>
+
+        <div class="bio animate__animated animate__shakeX">
+          <h2 class="bio-title">About Me</h2>
+          <p class="bio-text">
+            I am a Senior Math-Computer Science major who is comfortable coding 
+            in multiple computer languages. I had the performing analysis in 
+            statistical packages with the R language. There are project experiments, 
+            and team experience with multiple group like a UCSD Hackathon.
+          </p>
+        </div>
+    </section>
+
+    <!-- More about -->
+    <section class="more-about">
+        <h2>More About Me</h2>
+        <p>
+            Languages: Java, C++, C, ARM, SFML, Python, MATLAB, Linux, LATEX, R, HTML/CSS/JavaScirpt
+        </p>
+        <p>
+            Tools: GIT, GitHub,AWS AI Devices, AWS SageMaker, AWS Web Amplify
+        </p>
+        <p>
+            Techniques: Unit testing, object mocking,Basic object-oriented design
+        </p>
+        <p>
+            Quantitative Research: Mathematical optimization, Stochastic Process, Probability/Statistical methods, 
+            Linear Algebra, Mathematical Modeling, Serialization, Reinforcement learning
+        </p>
+        <p> 
+            Communication: English, Cantonese (fluent speaker), Chinese (reading and writing)
+        </p>
+    </section>
+
+
+    <!-- Skills section -->
+    <section class="skills" id="skills">
+        <h2 class="skill-header" id = "skill-header">My Top Skills</h2>
+        <div class="skills-wrapper">
+          <div class="first-set animate__animated animate__pulse">
+            <img
+              src="assets/icons/icons8-html-5.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <img
+              src="assets/icons/icons8-css3.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <img
+              src="assets/icons/icons8-javascript.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+          </div>
+  
+          <div class="second-set animate__animated animate__pulse">
+            <img
+              src="assets/icons/icons8-bootstrap.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <img
+              src="assets/icons/icons8-react-native.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <img
+              src="assets/icons/icons8-git.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+          </div>
+        </div>
+      </section>
+
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+        <h2>Some of my Recent Projects</h2>
+        <div class="projects-container">
+          <div class="project-container project-card">
+            <img
+              src="LogoMaker.png"
+              alt="expense-tracker"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Logo Maker</h3>
+            <p class="project-details">
+                • Build the Logo Editor using C++ & SFML in Windows & macOS System. 
+                • Design custom logos features with 13 customizable properties including rainbow color, animation effect, etc. 
+                • Design the features about upload the data, download graphs, and save the project.
+            </p>
+            <a href="https://github.com/yiy054/Logo_Maker" target="_blank" class="project-link">Check it Out</a>
+          </div>
+
+          <div class="project-container project-card">
+            <img
+              src="Compress & Decompress.png"
+              alt="netflic-clone"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Compress & Decompress</h3>
+            <p class="project-details">
+                • Simulated the Huffman Tree to build the Compress and Decompress feature.
+                • Used the Binary Serialization to stored the Huffman Tree structure instead the frequency in Header. Decreased the header size achieve max 50 perce
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+          </div>
+          <div class="project-container project-card">
+            <img
+              src="Label.png"
+              alt="greeny-earth"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Label(NFT) App</h3>
+            <p class="project-details">
+                • Building the NFT Application for sale and buy the NFT product.
+                • Specializes in the field of artwork NFT and includes paintings, music, badges, etc.
+                • Building web front-end design with AWS Amplify. Performed UIUX design and page switching.
+                • Conducted specific research on over 5 social software art domains and located over 10 initial artists.
+            </p>
+            <a href="https://test.d2gzk6mxb1aeb3.amplifyapp.com/" target="_blank" class="project-link">Check it Out</a>
+          </div>
+        </div>
+      </section>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+        <h2>Get In Touch With Me</h2>
+        <div class="contact-form-container">
+          <div class="contact-form">
+            <form action="https://formspree.io/f/xyylngw" method="POST">
+              <div class="form-control">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="sender-name"
+                  placeholder="Enter Your Name"
+                  class="input-field"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="sender-email"
+                  placeholder="Enter Your Email"
+                  class="input-field"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  cols="60"
+                  rows="10"
+                  placeholder="Enter Your Message"
+                  name="message"
+                  class="input-field"
+                  required
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                value="Submit"
+                id="submit-btn"
+                class="submit-btn"
+              />
+            </form>
+          </div>
+        </div>
+    </section>
+
+    <!-- Social accounts - Fixed to the right -->
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/yi-yao-11b356221" target="_blank"
+          ><img
+            src="assets/icons/icons8-linkedin-circled.gif"
+            alt="Linkedin"
+            loading="lazy"
+            class="socicon"
+        /></a>
+        <a href="https://github.com/yiy054" target="_blank"
+          ><img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
+        /></a>
+        <!-- <a href="#" target="_blank"
+        ><img
+          src="assets/icons/icons8-instagram.gif"
+          alt="Instagram"
+          loading="lazy"
+          class="socicon"
+        /></a> -->
+    </div>
+    <!-- Scroll to top -->
+    <i class="scroll-up" id="scroll-up">
+        <img
+        src="assets/icons/icons8-upward-arrow.gif"
+        class="socicon up-arrow"
+        alt="scroll-up"
+        />
+    </i>
+
+    <!-- Footer section -->
+    <footer>
+        <p class="copy">&copy; Copyright 2022</p>
+        <p class="copy">
+            Built with &#x2661; by
+            <!-- <a href="#" target="_blank"
+                >Yi Yao </a -->
+            <a >Yi Yao </a>
+        </p>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Ion icons scripts -->
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+
+    <div id="container" > 
+        <div class="wrapper">
+            <div id="header" >
+                    <h1 style="font-weight: bold; text-align:center; ">Yi Yao Page</h1>
+                    <h2 style="text-align:center;">Welcome to the world of Yi Yao</h2>
+                </div> 
+            <!-- <div id="data" style="background-color:#FFD700;height:200px;width:50%;float:left;"> -->
+        </div>
+    </div>
+</body>
+</html>
