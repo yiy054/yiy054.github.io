@@ -47,19 +47,6 @@
         <span> Yi Yao </span>
     </div> -->
 
-    <script type="text/javascript">
-        const bg=document.querySelector(".bg");
-        document.addEventListener("scroll", 
-        function(){
-            const scrollY = window.scrollY;
-            if(scrollY != 0){
-                bg.style.backgroundPosition = "calc(50% + "+scrollY+"px) calc(50% + "+scrollY+"px)"; 
-            }else{
-                bg.style.backgroundPosition = "";
-            }
-        })
-    </script>
-
     <!-- Hero Section -->
     <section class="hero" id="about">
         <!-- <img
@@ -109,47 +96,7 @@
     <section class="skills" id="skills">
         <h2 class="skill-header" id = "skill-header">My Top Skills</h2>
         <div class="skills-wrapper">
-          <div class="first-set animate__animated animate__pulse">
-            <img
-              src="assets/icons/icons8-html-5.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-            <img
-              src="assets/icons/icons8-css3.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-            <img
-              src="assets/icons/icons8-javascript.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-          </div>
-  
-          <div class="second-set animate__animated animate__pulse">
-            <img
-              src="assets/icons/icons8-bootstrap.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-            <img
-              src="assets/icons/icons8-react-native.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-            <img
-              src="assets/icons/icons8-git.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-          </div>
+          <p>HTML &middot; CSS &middot; JavaScript &middot; Bootstrap &middot; React Native &middot; Git</p>
         </div>
       </section>
 
@@ -185,7 +132,7 @@
                 • Simulated the Huffman Tree to build the Compress and Decompress feature.
                 • Used the Binary Serialization to stored the Huffman Tree structure instead the frequency in Header. Decreased the header size achieve max 50 perce
             </p>
-            <a href="#" target="_blank" class="project-link">Check it Out</a>
+            <a href="https://github.com/yiy054" target="_blank" class="project-link">Check it Out</a>
           </div>
           <div class="project-container project-card">
             <img
@@ -259,32 +206,11 @@
 
     <!-- Social accounts - Fixed to the right -->
     <div class="socials">
-        <a href="https://www.linkedin.com/in/yi-yao-11b356221" target="_blank"
-          ><img
-            src="assets/icons/icons8-linkedin-circled.gif"
-            alt="Linkedin"
-            loading="lazy"
-            class="socicon"
-        /></a>
-        <a href="https://github.com/yiy054" target="_blank"
-          ><img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
-        /></a>
-        <!-- <a href="#" target="_blank"
-        ><img
-          src="assets/icons/icons8-instagram.gif"
-          alt="Instagram"
-          loading="lazy"
-          class="socicon"
-        /></a> -->
+        <a href="https://www.linkedin.com/in/yi-yao-11b356221" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yiy054" target="_blank">GitHub</a>
     </div>
     <!-- Scroll to top -->
-    <i class="scroll-up" id="scroll-up">
-        <img
-        src="assets/icons/icons8-upward-arrow.gif"
-        class="socicon up-arrow"
-        alt="scroll-up"
-        />
-    </i>
+    <i class="scroll-up" id="scroll-up">&uarr;</i>
 
     <!-- Footer section -->
     <footer>
@@ -298,7 +224,20 @@
     </footer>
 
     <!-- Website scripts -->
-    <script src="assets/js/app.js"></script>
+    <script src="app.js"></script>
+
+    <script type="text/javascript">
+        const bg = document.querySelector(".bg");
+        document.addEventListener("scroll", function () {
+            if (!bg) return;
+            const scrollY = window.scrollY;
+            if (scrollY != 0) {
+                bg.style.backgroundPosition = "calc(50% + " + scrollY + "px) calc(50% + " + scrollY + "px)";
+            } else {
+                bg.style.backgroundPosition = "";
+            }
+        });
+    </script>
 
     <!-- Ion icons scripts -->
     <script
@@ -311,14 +250,5 @@
     ></script>
 
 
-    <div id="container" > 
-        <div class="wrapper">
-            <div id="header" >
-                    <h1 style="font-weight: bold; text-align:center; ">Yi Yao Page</h1>
-                    <h2 style="text-align:center;">Welcome to the world of Yi Yao</h2>
-                </div> 
-            <!-- <div id="data" style="background-color:#FFD700;height:200px;width:50%;float:left;"> -->
-        </div>
-    </div>
 </body>
 </html>
