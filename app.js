@@ -1,38 +1,29 @@
-const scrollUp = document.querySelector("#scroll-up");
-
-// Nav hamburgerburger selections
-
+// Nav hamburger toggle
 const burger = document.querySelector("#burger-menu");
-const ul = document.querySelector("nav ul");
-const nav = document.querySelector("nav");
-
-// Select nav links
-const navLink = document.querySelectorAll(".nav-link");
-
-// const bg=document.querySelector(".bg");
-
-
-scrollUp.addEventListener("click", () => 
-    {window.scrollTo({top: 0, left: 0, behavior: "smooth",}); 
-});
+const navMenu = document.querySelector("#nav-menu");
 
 burger.addEventListener("click", () => {
-    ul.classList.toggle("show");
+  navMenu.classList.toggle("show");
 });
 
-// Close hamburger menu when a link is clicked
+// Close mobile nav on link click
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+  });
+});
 
-navLink.forEach((link) =>
-    link.addEventListener("click", () => {
-        ul.classList.remove("show");
-    })
-);
+// Scroll-to-top button
+const scrollUp = document.querySelector("#scroll-up");
 
-// bg.addEventListener("scroll", ()=>{
-//     const scrollY = window.scrollY;
-//     if(scrollY != 0){
-//         bg.style.backgroundPosition = "calc(50% +" +scrollY+ "px) calc(50% +" +scrollY+ "px)"; 
-//     }else{
-//         bg.style.backgroundPosition = "";
-//     }
-// });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    scrollUp.classList.add("visible");
+  } else {
+    scrollUp.classList.remove("visible");
+  }
+});
+
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
